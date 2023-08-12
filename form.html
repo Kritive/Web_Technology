@@ -11,40 +11,50 @@
 
     <form action="">
       <label for="">Full name*:</label><br />
-      <input type="text" placeholder="FirstName LastName" required /><br />
+      <input
+        type="text"
+        name="Full name"
+        placeholder="FirstName LastName"
+        required
+      /><br />
 
       <label for="">Email address*:</label><br />
-      <input type="email" placeholder="Email_address" required /><br />
+      <input
+        type="email"
+        name="Email address"
+        placeholder="Email_address"
+        required
+      /><br />
 
       <label for="">Select Tour Package*:</label><br />
       <select name="places" id="" required>
         <option value="select">Select</option>
         <option value="Goa">Goa</option>
         <option value="ABC">ABC</option>
-        <option value="Manali">Manali</option>
-        </select><br />
+        <option value="Manali">Manali</option></select
+      ><br />
 
       <label for="">Arrival date*:</label><br />
-      <input type="date" placeholder="m/d/y" required /><br />
+      <input type="date" name="Arrival date" placeholder="m/d/y" required /><br />
 
       <label for="">Number of persons*:</label><br />
-      <input type="number" placeholder="UNKNOWN_TYPE" required /><br />
+      <input type="number" name="Number of persons" placeholder="UNKNOWN_TYPE" required /><br />
 
       <label for="">What wound you want to avail?*:</label><br />
       <label for="">Boarding</label>
-      <input type="checkbox" value="Boarding" /><br />
+      <input type="checkbox" value="Boarding" name="Boarding" /><br />
       <label for="">Fooding</label>
-      <input type="checkbox" value="Fooding" /><br />
+      <input type="checkbox" value="Fooding" name="Fooding" /><br />
       <label for="">Sight seeing</label>
-      <input type="checkbox" value="Sight seeing" /><br />
+      <input type="checkbox" value="Sight seeing" name="Sight seeing" /><br />
 
       <label for="">Discount Coupon code:</label><br />
-      <input type="text" placeholder="UNKNOWN_TYPE" /><br />
+      <input type="text" name="Discount Coupon code" placeholder="UNKNOWN_TYPE" /><br />
 
       <label for="">Terms and conditions*</label><br />
       <input type="radio" value="agree" name="condition" required />
       <label for="agree">I agree</label>
-      <input type="radio" value="disagree" name="condition"/>
+      <input type="radio" value="disagree" name="condition" />
       <label for="disagree">I disagree</label><br />
 
       <button>Complete Reservation</button>
