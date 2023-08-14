@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Write a JavaScript program to create a function that takes two numeric 
+    arrays as argument, merge them and return the sum of even numbers. -->
+    <p id="demo"></p>
+    <script>
+      function sumEvenNumbers(arr1, arr2) {
+        const mergedArray = arr1.concat(arr2);
+        let evenSum = 0;
+        
+        for (let i = 0; i < mergedArray.length; i++) {
+          if (mergedArray[i] % 2 === 0) {
+            evenSum += mergedArray[i];
+          }
+        }
+        
+        return evenSum;
+      }
+      
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+      
+      const result = sumEvenNumbers(arr1, arr2);
+      document.getElementById("demo").textContent = `Sum of even numbers: ${result}`;
+    </script>
+  </body>
+</html>
