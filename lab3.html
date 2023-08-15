@@ -10,25 +10,26 @@
 <form id="signupForm">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="name" >
+    <input type="text" id="name" name="name" required>
   </div>
   <div>
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email" >
+    <input type="email" id="email" name="email" required>
   </div>
   <div>
     <label for="password">Password:</label>
-    <input type="password" id="password" name="password" >
+    <input type="password" id="password" name="password" required>
   </div>
   <div>
     <label for="confirmPassword">Confirm Password:</label>
-    <input type="password" id="confirmPassword" name="confirmPassword" >
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
   </div>
   <div>
     <label for="age">Age:</label>
-    <input type="number" id="age" name="age" >
+    <input type="number" id="age" name="age" required>
   </div>
   <button type="submit">Sign Up</button>
+  <div id="error-message"></div>
 </form>
 
 <script>
@@ -36,7 +37,7 @@
   const errorMessage = document.getElementById("error-message");
 
   form.addEventListener("submit", function (event) {
-    errorMessage.innerHTML = "";
+    errorMessage.innerHTML = ""; 
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
@@ -45,7 +46,7 @@
 
     if (!name || !email || !password || !confirmPassword || isNaN(age)) {
       event.preventDefault();
-      errorMessage.innerHTML = "All fields are .";
+      errorMessage.innerHTML = "All fields are required.";
       return;
     }
 
